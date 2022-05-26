@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+    <p>
+        Enter your username and password:
+    </p>
+    <form action="" method="post">
+        <p>
+            <label for="username">Username</label>
+            <input type="text" name="username">
+        </p>
+        <p>
+            <label for="password">Password</label>
+            <input type="password" name="password">
+        </p>
+        <p>
+            <input type="submit">
+        </p>
+    </form>
+    {% if is_empty_creds %}
+    <p>Error! Empty fields! </p>
+    {% endif %}
+    {% if no_user %}
+    <p>Error! No user with username "{{no_user}}" ! </p>
+    {% endif %}
+</body>
+</html>
